@@ -12,7 +12,6 @@ export default function SiteHeader() {
     if (user) {
       setCurrUser(user)
     }
-    console.log(user);
   });
 
   return (
@@ -24,7 +23,7 @@ export default function SiteHeader() {
         <ul>
           <li>
             {currUser ? (
-            <Link className="loginBtn" href="/about">Login</Link>
+            <Link className="loginBtn" href="/login">Login</Link>
             ) : (
               <Link className="loginBtn" href="#" onClick={(event) => DoSignOut(event, auth)}>Sign Out</Link>
             )}
