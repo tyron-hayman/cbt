@@ -1,0 +1,105 @@
+p {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+  }
+}
+#global-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 24px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+#global-header .global-logo h3 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  color: rgb(0, 0, 0);
+}
+#global-header .main-nav ul {
+  display: flex;
+  align-content: center;
+}
+#global-header .main-nav .loginBtn {
+  background: rgb(255, 255, 255);
+  border-radius: 9999px;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  -o-border-radius: 9999px;
+  padding: 10px 30px;
+  background: #1384f3;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+}
+
+#global-footer {
+  width: 100%;
+  padding: 20px;
+}
+#global-footer.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+#global-footer p {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+#global-footer p svg {
+  display: inline;
+}
+
+.global-loader-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.global-loader-wrapper .global-loader {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border: #e84972 2px solid;
+  border-left-color: #1384f3;
+  border-right-color: #1384f3;
+  animation: rotation 0.35s linear forwards infinite;
+  -webkit-animation: rotation 0.35s linear forwards infinite;
+  -moz-animation: rotation 0.35s linear forwards infinite;
+  -o-animation: rotation 0.35s linear forwards infinite;
+}
+
+.mainbtn-lg {
+  background: rgb(0, 0, 0);
+  padding: 20px 60px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=globals.css.map */

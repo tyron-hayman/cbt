@@ -1,0 +1,86 @@
+// Branding
+$bgColor: #f4f4f4;
+$white: rgba(255, 255, 255, 1);
+$white25: rgba(255, 255, 255, 0.3);
+$black: rgba(0, 0, 0, 1);
+$black25: rgba(0, 0, 0, 0.25);
+$grey: rgba(0, 0, 0, 0.6);
+$primaryBlue: #1384f3;
+$primaryFontColor: rgba(0, 0, 0, 0.9);
+$pink: #e84972;
+$green: #1cdc43;
+
+// Font sizes
+p {
+  color: $primaryFontColor;
+}
+
+// Mixins
+@mixin backgroundSize($arg) {
+  background-size: $arg !important;
+  -webkit-background-size: $arg !important;
+  -moz-background-size: $arg !important;
+  -o-background-size: $arg !important;
+}
+
+@mixin borderRadius($arg) {
+  border-radius: $arg;
+  -webkit-border-radius: $arg;
+  -moz-border-radius: $arg;
+  -o-border-radius: $arg;
+}
+
+@mixin DMSans($weight) {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin transform($arg) {
+  transform: $arg !important;
+  -webkit-transform: $arg !important;
+  -moz-transform: $arg !important;
+  -o-transform: $arg !important;
+}
+
+@mixin srirachaRegular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin animation($args) {
+    animation: $args;
+    -webkit-animation: $args;
+    -moz-animation: $args;
+    -o-animation: $args;
+}
+
+// Animations
+
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+    }
+}

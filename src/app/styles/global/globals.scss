@@ -1,0 +1,84 @@
+@use "../variables" as v;
+
+#global-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 24px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  .global-logo {
+    h3 {
+      @include v.DMSans(800);
+      font-size: 1rem;
+      letter-spacing: -1px;
+      color: v.$black;
+    }
+  }
+  .main-nav {
+    ul {
+      display: flex;
+      align-content: center;
+    }
+    .loginBtn {
+      background: v.$white;
+      @include v.borderRadius(9999px);
+      padding: 10px 30px;
+      background: v.$primaryBlue;
+      color: v.$white;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+#global-footer {
+  width: 100%;
+  padding: 20px;
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  p {
+    font-size: 0.7rem;
+    color: v.$grey;
+    @include v.DMSans(400);
+    svg {
+      display: inline;
+    }
+  }
+}
+
+// Loader
+
+.global-loader-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .global-loader {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: v.$white;
+    border: v.$pink 2px solid;
+    border-left-color: v.$primaryBlue;
+    border-right-color: v.$primaryBlue;
+    @include v.animation(rotation 0.35s linear forwards infinite);
+  }
+}
+
+// Buttons
+
+.mainbtn-lg {
+  background: v.$black;;
+  padding: 20px 60px;
+  @include v.DMSans(300);
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: v.$white;
+}

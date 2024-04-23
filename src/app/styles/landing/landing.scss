@@ -1,0 +1,122 @@
+@use "../variables";
+
+#landingWrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    div.landingContentLeft {
+        width: 60%;
+       .landingContent {
+        width: 90%;
+        text-align: center;
+        position: relative;
+        .registrationWrapLanding {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: -100px;
+        }
+        h1 {
+            font-size: 4rem;
+            line-height: 7rem;
+            @include variables.DMSans(1000);
+            letter-spacing: -0.2rem;
+            text-transform: capitalize;
+            margin: 0;
+            padding: 0;
+            span {
+                color: variables.$primaryBlue;
+            }
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            margin-bottom: 50px;
+        }
+       }
+       .registration-form-wrap {
+        .registration-form {
+            width: 50%;
+            margin: 0 auto;
+            .formInputs {
+                position: relative;
+                margin-bottom: 20px;
+                input {
+                    width: 100%;
+                    background: variables.$white;
+                    border: variables.$black25 2px solid;
+                    @include variables.DMSans(400);
+                    font-size: 1rem;
+                    padding: 10px;
+                    color: variables.$black;
+                    &.error {
+                        border-color: variables.$pink;
+                    }
+                    &.valid {
+                        border-color: variables.$green;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                button {
+                    background: variables.$black;
+                    color: variables.$white;
+                    @include variables.DMSans(400);
+                    font-size: 1rem;
+                    padding: 15px 40px;
+                }
+            }
+        }
+       }
+    }
+    div.landingContentRight {
+        width: 30%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         @include variables.backgroundSize(cover);
+         @include variables.borderRadius(100px);
+         .landingProductListWrap {
+            width: 100%;
+            flex-grow: 0;
+            .landingProductItem {
+                width: 125%;
+                display: flex;
+                align-items: center;
+                background: variables.$white25;
+                padding: 4px;
+                backdrop-filter: blur(20px);
+                @include variables.borderRadius(25px);
+                margin: 10px 0;
+                .landingProductIcon {
+                    padding: 20px 30px;
+                    @include variables.borderRadius(25px);
+                    background: variables.$primaryBlue;
+                    color: variables.$white;
+                    font-size: 1.7rem;
+                    margin-right: 30px
+                }
+                p {
+                    @include variables.DMSans(300);
+                    color: variables.$black;
+                    font-size: 0.9rem;
+                    line-height: 1.2rem;
+                    padding: 20px 0;
+                    margin: 0;
+                }
+            }
+         }
+    }
+}
