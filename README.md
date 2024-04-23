@@ -1,3 +1,7 @@
+# LossAlamos / CBT
+
+The purpose of this app is to construct a tool that inidividuals who suffer from anxiety and / or depression can use to help document thier moods and journey. Additionally, an A.I. tool will help user to understand what depression and anxiety are and have the ability to ask any question they wish.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
