@@ -40,13 +40,12 @@ export default function Home() {
     visible: () => ({
       opacity: 1,
       y : 0,
-      z : 0,
+      "zIndex" : 10,
       transition: { delay: 0.35, duration : 0.5, ease: "easeInOut" },
     }),
     not_visible: () => ({
       opacity: 0,
       y : 100,
-      z : 10,
       transition: { duration : 0.35, ease: "easeInOut" },
     }),
   };

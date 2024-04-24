@@ -19,7 +19,7 @@ p {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 #loginPageWrapper h1 {
@@ -32,9 +32,24 @@ p {
   margin: 0;
   padding: 0;
 }
-#loginPageWrapper h1 span {
+#loginPageWrapper .loginPageRight {
+  width: 50%;
+  height: 100vh;
   background: #1384f3;
-  color: rgb(255, 255, 255);
-  padding: 3px 15px;
-  display: inline-block;
+}
+#loginPageWrapper .loginPageLeft {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginPageWrapper .loginPageLeft .loginWrap {
+  width: 50%;
+}
+#loginPageWrapper .loginPageLeft .loginWrap .loginForm {
+  margin: 30px 0;
+}
+#loginPageWrapper .loginPageLeft .loginWrap button {
+  margin-top: 10px;
 }/*# sourceMappingURL=login.css.map */

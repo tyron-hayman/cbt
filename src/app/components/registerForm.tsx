@@ -74,7 +74,7 @@ export default function RegistrationForm() {
                   type="email"
                   name="emailRegInput"
                   placeholder="Email *"
-                  className="rounded-lg"
+                  className="rounded-lg border-gray-100 border-2"
                   onChange={(event) => setCheckEmail(event)}
                 />
               </div>
@@ -83,7 +83,7 @@ export default function RegistrationForm() {
                   type="password"
                   name="emailRegInput"
                   placeholder="Password *"
-                  className="rounded-lg"
+                  className="rounded-lg border-gray-100 border-2"
                   onChange={(event) => setRegPass(event.currentTarget.value)}
                 />
               </div>
@@ -92,7 +92,7 @@ export default function RegistrationForm() {
                   type="passwordConf"
                   name="emailRegInput"
                   placeholder="Password Confirmation *"
-                  className="rounded-lg"
+                  className="rounded-lg border-gray-100 border-2"
                   onChange={(event) => checkPassMatch(event)}
                 />
               </div>

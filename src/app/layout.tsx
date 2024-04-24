@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from 'next/head'
+import Head from 'next/head';
+import { AuthContextProvider } from './context/AuthContext'
 import "./styles/reset.css";
 import "./styles/globals.css";
 import "./styles/global/globals.css";
@@ -24,7 +25,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
       </Head>
-      <body className={`${inter.className} antialiased subpixel-antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased subpixel-antialiased`}><AuthContextProvider>{children}</AuthContextProvider></body>
     </html>
   );
 }

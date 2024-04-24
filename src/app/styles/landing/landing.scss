@@ -48,35 +48,6 @@
         .registration-form {
             width: 50%;
             margin: 0 auto;
-            .formInputs {
-                position: relative;
-                margin-bottom: 20px;
-                input {
-                    width: 100%;
-                    background: variables.$white;
-                    border: variables.$black25 2px solid;
-                    @include variables.DMSans(400);
-                    font-size: 1rem;
-                    padding: 10px;
-                    color: variables.$black;
-                    &.error {
-                        border-color: variables.$pink;
-                    }
-                    &.valid {
-                        border-color: variables.$green;
-                    }
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                button {
-                    background: variables.$black;
-                    color: variables.$white;
-                    @include variables.DMSans(400);
-                    font-size: 1rem;
-                    padding: 15px 40px;
-                }
-            }
         }
        }
     }

@@ -82,3 +82,34 @@
   font-size: 1.3rem;
   color: v.$white;
 }
+
+// Forms
+
+.formInputs {
+  position: relative;
+  margin-bottom: 10px;
+  input {
+      width: 100%;
+      background: v.$white;
+      @include v.DMSans(400);
+      font-size: 0.9rem;
+      padding: 10px;
+      color: v.$black;
+      &.error {
+          border-color: v.$pink;
+      }
+      &.valid {
+          border-color: v.$green;
+      }
+      &:focus {
+          outline: none;
+      }
+  }
+  button {
+      background: v.$black;
+      color: v.$white;
+      @include v.DMSans(400);
+      font-size: 1rem;
+      padding: 15px 40px;
+  }
+}
