@@ -2,6 +2,18 @@ p {
   color: rgba(0, 0, 0, 0.9);
 }
 
+.gradient-text {
+  color: #e84972;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .gradient-text {
+    background-image: linear-gradient(60deg, #e84972, #1384f3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotateZ(0deg);
@@ -46,10 +58,7 @@ p {
 #landingWrapper div.landingContentLeft .landingContent h1 {
   font-size: 4rem;
   line-height: 7rem;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 1000;
-  font-style: normal;
+  font-weight: 800;
   letter-spacing: -0.2rem;
   text-transform: capitalize;
   margin: 0;
@@ -112,10 +121,7 @@ p {
   margin-right: 30px;
 }
 #landingWrapper div.landingContentRight .landingProductListWrap .landingProductItem p {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 400;
   color: rgb(0, 0, 0);
   font-size: 0.9rem;
   line-height: 1.2rem;

@@ -2,6 +2,18 @@ p {
   color: rgba(0, 0, 0, 0.9);
 }
 
+.gradient-text {
+  color: #e84972;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .gradient-text {
+    background-image: linear-gradient(60deg, #e84972, #1384f3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotateZ(0deg);
@@ -25,10 +37,7 @@ p {
 #loginPageWrapper h1 {
   font-size: 2rem;
   line-height: 2rem;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 1000;
-  font-style: normal;
+  font-weight: 800;
   margin: 0;
   padding: 0;
 }

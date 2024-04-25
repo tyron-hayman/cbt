@@ -2,6 +2,18 @@ p {
   color: rgba(0, 0, 0, 0.9);
 }
 
+.gradient-text {
+  color: #e84972;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .gradient-text {
+    background-image: linear-gradient(60deg, #e84972, #1384f3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotateZ(0deg);

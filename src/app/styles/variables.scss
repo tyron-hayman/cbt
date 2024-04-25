@@ -5,6 +5,7 @@ $white25: rgba(255, 255, 255, 0.3);
 $black: rgba(0, 0, 0, 1);
 $black25: rgba(0, 0, 0, 0.25);
 $grey: rgba(0, 0, 0, 0.4);
+$darkGrey: rgba(0, 0, 0, 0.7);
 $primaryBlue: #1384f3;
 $primaryFontColor: rgba(0, 0, 0, 0.9);
 $pink: #e84972;
@@ -13,6 +14,18 @@ $green: #1cdc43;
 // Font sizes
 p {
   color: $primaryFontColor;
+}
+
+.gradient-text {
+  color: $pink;
+}
+
+@supports (background-clip: text) {
+  .gradient-text {
+    background-image: linear-gradient(60deg, $pink, $primaryBlue);
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 // Mixins
@@ -31,10 +44,10 @@ p {
 }
 
 @mixin DMSans($weight) {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
   font-optical-sizing: auto;
   font-weight: $weight;
-  font-style: normal;
 }
 
 @mixin transform($arg) {

@@ -5,6 +5,7 @@ import {
     getAuth,
 } from 'firebase/auth';
 import app from '../clients/firebase';
+import GlobalLoader from "../components/loader";
 
 const auth = getAuth(app);
 
@@ -33,7 +34,7 @@ export const AuthContextProvider = ({
 
     return (
         <AuthContext.Provider value={{ user }}>
-            {loading ? <div>Loading...</div> : children}
+            {loading ? <GlobalLoader fixed={true} /> : children}
         </AuthContext.Provider>
     );
 };

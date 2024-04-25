@@ -2,6 +2,18 @@ p {
   color: rgba(0, 0, 0, 0.9);
 }
 
+.gradient-text {
+  color: #e84972;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .gradient-text {
+    background-image: linear-gradient(60deg, #e84972, #1384f3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotateZ(0deg);
@@ -14,6 +26,10 @@ p {
     -moz-transform: rotateZ(360deg);
   }
 }
+body {
+  font-family: var(--fonts-poppins);
+}
+
 #global-header {
   position: fixed;
   width: 100%;
@@ -26,10 +42,7 @@ p {
   align-content: center;
 }
 #global-header .global-logo h3 {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 800;
-  font-style: normal;
   font-size: 1rem;
   letter-spacing: -1px;
   color: rgb(0, 0, 0);
@@ -63,10 +76,7 @@ p {
 #global-footer p {
   font-size: 0.7rem;
   color: rgba(0, 0, 0, 0.4);
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
 }
 #global-footer p svg {
   display: inline;
@@ -77,6 +87,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.global-loader-wrapper.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #f4f4f4;
 }
 .global-loader-wrapper .global-loader {
   display: block;
@@ -95,10 +114,7 @@ p {
 .mainbtn-lg {
   background: rgb(0, 0, 0);
   padding: 20px 60px;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal;
   text-transform: capitalize;
   font-size: 1.3rem;
   color: rgb(255, 255, 255);
@@ -111,10 +127,7 @@ p {
 .formInputs input {
   width: 100%;
   background: rgb(255, 255, 255);
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
   font-size: 0.9rem;
   padding: 10px;
   color: rgb(0, 0, 0);
@@ -131,10 +144,7 @@ p {
 .formInputs button {
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
   font-size: 1rem;
   padding: 15px 40px;
 }/*# sourceMappingURL=globals.css.map */

@@ -1,24 +1,27 @@
 "use client";
 import "../styles/dashboard/login.css";
-import { firebaseLogin } from "../actions"
+import { FirebaseLogin } from "../utils/utils";
 import ButtonMain from "../components/elements/button";
 import { useAuthContext } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function LoginPage() {
-  const { user } : any = useAuthContext()
-    const router = useRouter()
+  const { user }: any = useAuthContext();
+  const router = useRouter();
 
+  useEffect(() => {
+    if (user != null) router.push("/dashboard");
+  }, [user]);
 
   return (
     <>
       <div id="loginPageWrapper">
         <div className="loginPageLeft">
           <div className="loginWrap">
-            {user ? <h1>LossAlamos</h1> : <h1>Welcome back</h1> }
+            <h1>LossAlamos</h1>
             <div className="loginForm">
-              <form action={firebaseLogin}>
+              <form action={FirebaseLogin}>
                 <div className="formInputs">
                   <input
                     type="email"
@@ -36,7 +39,7 @@ export default function LoginPage() {
                   />
                 </div>
                 <div className="formInputs">
-                  <ButtonMain title="Login"/>
+                  <ButtonMain title="Login" />
                 </div>
               </form>
             </div>
