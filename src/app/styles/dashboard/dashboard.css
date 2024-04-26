@@ -102,11 +102,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 .dashboard-content-ai .ai-response-wrap {
-  width: 60%;
+  width: 80%;
 }
-.dashboard-content-ai .ai-response-wrap h1, .dashboard-content-ai .ai-response-wrap h2 {
+.dashboard-content-ai .ai-response-wrap h1,
+.dashboard-content-ai .ai-response-wrap h2 {
   font-family: var(--fonts-poppins);
   font-weight: 800;
   margin: 0;
@@ -119,13 +121,44 @@ p {
 .dashboard-content-ai .ai-response-wrap h2 {
   font-family: var(--fonts-poppins);
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgba(0, 0, 0, 0.4);
   margin: 0 0 50px 0;
 }
-.dashboard-content-ai .ai-response-wrap .ai-prompt-wrap {
+.dashboard-content-ai .ai-response-wrap .ai-response-box-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 200px;
+  top: 0;
   width: 100%;
-  padding: 30px 0;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.dashboard-content-ai .ai-response-wrap .ai-response-box {
+  width: 70%;
+}
+.dashboard-content-ai .ai-response-wrap .ai-response-box p {
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.dashboard-content-ai .ai-response-wrap .ai-response-box p strong {
+  font-size: 1.1rem;
+  display: block;
+  font-weight: 800;
+  padding: 20px 0 10px 0;
+}
+.dashboard-content-ai .ai-response-wrap .ai-prompt-wrap {
+  padding: 40px 0 30px 0;
+  width: 100%;
+  z-index: 5;
+  position: relative;
+  z-index: 10;
 }
 .dashboard-content-ai .ai-response-wrap .ai-prompt-wrap .ai_prompt_textarea {
   width: 100%;
@@ -145,4 +178,41 @@ p {
   font-size: 0.7rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.gemResponseWrap, .gemLoader {
+  position: relative;
+  background: #f4f4f4;
+  padding: 1.5% 2.5%;
+  background: #f4f4f4;
+  margin: 50px 0 0 10px;
+  width: 80%;
+  float: left;
+}
+.gemResponseWrap.user, .gemLoader.user {
+  background-color: #1384f3;
+  color: rgb(255, 255, 255);
+  width: 80%;
+  float: right;
+  margin: 30px 10px 0 0;
+}
+.gemResponseWrap.user p, .gemLoader.user p {
+  color: rgb(255, 255, 255) !important;
+}
+.gemResponseWrap .gemProfileImage, .gemLoader .gemProfileImage {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  top: -5px;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+}
+.gemResponseWrap .gemProfileImage.gem_image, .gemLoader .gemProfileImage.gem_image {
+  right: -100px;
+}
+.gemResponseWrap .gemProfileImage.user_image, .gemLoader .gemProfileImage.user_image {
+  left: -100px;
 }/*# sourceMappingURL=dashboard.css.map */

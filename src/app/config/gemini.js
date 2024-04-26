@@ -7,7 +7,7 @@ import {
     HarmBlockThreshold,
   } from "@google/generative-ai";
   
-  const MODEL_NAME = "gemini-1.5-pro-latest";
+  const MODEL_NAME = "gemini-1.0-pro";
   const API_KEY = process.env.NEXT_PUBLIC_GEMINI_KEY;
   
   async function runChat(prompt) {
@@ -18,7 +18,7 @@ import {
       temperature: 1,
       topK: 0,
       topP: 0.95,
-      maxOutputTokens: 8192,
+      maxOutputTokens: 8192
     };
   
     const safetySettings = [
@@ -50,7 +50,7 @@ import {
     const result = await chat.sendMessage(prompt);
     const response = result.response;
 
-    return response;
+    return response.text();
   }
   
   export default runChat;
