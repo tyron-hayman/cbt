@@ -42,9 +42,14 @@ p {
 #dashboard-sidebar {
   position: relative;
   height: 100vh;
-  background: #f4f4f4;
+  background: rgb(16, 24, 38);
   width: 200px;
   overflow: hidden;
+  border: rgb(255, 255, 255) 4px solid;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -o-border-radius: 2rem;
 }
 #dashboard-sidebar .sb-header {
   width: 140px;
@@ -52,11 +57,11 @@ p {
 }
 #dashboard-sidebar .sb-header a {
   font-size: 1.3rem;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgb(255, 255, 255);
 }
 #dashboard-sidebar .sb-nav {
   width: 140px;
-  border-top: rgba(255, 255, 255, 0.3) 2px solid;
+  border-top: rgba(0, 0, 0, 0.25) 2px solid;
   margin: 30px 0 30px 30px;
 }
 #dashboard-sidebar .sb-nav-footer {
@@ -70,7 +75,7 @@ p {
   margin: 30px 0 0 0;
 }
 #dashboard-sidebar .nav-items a {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
   font-size: 0.7rem;
   font-family: var(--fonts-poppins);
   font-weight: 400;
@@ -87,7 +92,7 @@ p {
   margin: 0 0 0 20px;
 }
 #dashboard-sidebar.close {
-  width: 80px;
+  width: 90px;
 }
 #dashboard-sidebar.close .nav-items a span {
   display: none;
@@ -104,26 +109,25 @@ p {
   align-items: flex-end;
   flex-wrap: wrap;
 }
+.dashboard-content-ai .ai-limits-wrap {
+  background: rgb(16, 24, 38);
+  padding: 1.5%;
+}
 .dashboard-content-ai .ai-response-wrap {
-  width: 80%;
+  width: 100%;
 }
 .dashboard-content-ai .ai-response-wrap h1,
 .dashboard-content-ai .ai-response-wrap h2 {
   font-family: var(--fonts-poppins);
-  font-weight: 800;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
 }
-.dashboard-content-ai .ai-response-wrap h1 {
-  font-size: 7rem;
-}
-.dashboard-content-ai .ai-response-wrap h2 {
+.dashboard-content-ai .ai-response-wrap .ai-repsonse-box-intro p {
   font-family: var(--fonts-poppins);
-  font-weight: 300;
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.4);
-  margin: 0 0 50px 0;
+  margin: 10px 0 30px 0;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+.dashboard-content-ai .ai-response-wrap .ai-repsonse-box-intro.hide {
+  display: none;
 }
 .dashboard-content-ai .ai-response-wrap .ai-response-box-wrap {
   position: absolute;
@@ -135,17 +139,17 @@ p {
   overflow-y: scroll;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
 .dashboard-content-ai .ai-response-wrap .ai-response-box {
-  width: 70%;
+  width: 100%;
+  padding: 2.5%;
 }
 .dashboard-content-ai .ai-response-wrap .ai-response-box p {
   color: rgba(0, 0, 0, 0.9);
   font-weight: 400;
-  font-size: 0.9rem;
 }
 .dashboard-content-ai .ai-response-wrap .ai-response-box p strong {
   font-size: 1.1rem;
@@ -154,7 +158,7 @@ p {
   padding: 20px 0 10px 0;
 }
 .dashboard-content-ai .ai-response-wrap .ai-prompt-wrap {
-  padding: 40px 0 30px 0;
+  padding: 40px 2.5% 30px 2.5%;
   width: 100%;
   z-index: 5;
   position: relative;
@@ -175,28 +179,32 @@ p {
   margin: 20px 0 0 0;
   display: block;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.4);
 }
 
 .gemResponseWrap, .gemLoader {
   position: relative;
-  background: #f4f4f4;
-  padding: 1.5% 2.5%;
-  background: #f4f4f4;
-  margin: 50px 0 0 10px;
   width: 80%;
   float: left;
+  margin-top: 60px;
+}
+.gemResponseWrap span, .gemLoader span {
+  color: rgba(0, 0, 0, 0.9);
+}
+.gemResponseWrap .gemResponseBox, .gemLoader .gemResponseBox {
+  background: #f4f4f4;
+  padding: 25px;
+  margin-top: 10px;
 }
 .gemResponseWrap.user, .gemLoader.user {
-  background-color: #1384f3;
   color: rgb(255, 255, 255);
   width: 80%;
   float: right;
-  margin: 30px 10px 0 0;
 }
-.gemResponseWrap.user p, .gemLoader.user p {
+.gemResponseWrap.user .gemResponseBox, .gemLoader.user .gemResponseBox {
+  background-color: #1384f3;
   color: rgb(255, 255, 255) !important;
 }
 .gemResponseWrap .gemProfileImage, .gemLoader .gemProfileImage {
@@ -215,4 +223,19 @@ p {
 }
 .gemResponseWrap .gemProfileImage.user_image, .gemLoader .gemProfileImage.user_image {
   left: -100px;
+}
+
+.dashboard-content-settings {
+  position: relative;
+  width: 100%;
+  padding: 2.5%;
+}
+.dashboard-content-settings .db-settingsForm .fire_uid {
+  display: none;
+}
+
+.dashboard-content-journal {
+  position: relative;
+  width: 100%;
+  padding: 2.5%;
 }/*# sourceMappingURL=dashboard.css.map */

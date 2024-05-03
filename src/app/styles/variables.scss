@@ -10,6 +10,7 @@ $primaryBlue: #1384f3;
 $primaryFontColor: rgba(0, 0, 0, 0.9);
 $pink: #e84972;
 $green: #1cdc43;
+$darkBlue: rgb(16,24,38);
 
 // Font sizes
 p {
@@ -48,6 +49,13 @@ p {
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: $weight;
+}
+
+@mixin transition($arg) {
+  transition: $arg !important;
+  -webkit-transition: $arg !important;
+  -moz-transition: $arg !important;
+  -o-transition: $arg !important;
 }
 
 @mixin transform($arg) {

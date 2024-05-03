@@ -16,20 +16,22 @@
 #dashboard-sidebar {
   position: relative;
   height: 100vh;
-  background: v.$bgColor;
+  background: v.$darkBlue;
   width: 200px;
   overflow: hidden;
+  border: v.$white 4px solid;
+  @include v.borderRadius(2rem);
   .sb-header {
     width: 140px;
     margin: 30px 0 30px 30px;
     a {
       font-size: 1.3rem;
-      color: v.$grey;
+      color: v.$white;
     }
   }
   .sb-nav {
     width: 140px;
-    border-top: v.$white25 2px solid;
+    border-top: v.$black25 2px solid;
     margin: 30px 0 30px 30px;
   }
   .sb-nav-footer {
@@ -42,7 +44,7 @@
     display: block;
     margin: 30px 0 0 0;
     a {
-      color: v.$darkGrey;
+      color: v.$white;
       font-size: 0.7rem;
       font-family: var(--fonts-poppins);
       font-weight: 400;
@@ -57,7 +59,7 @@
     }
   }
   &.close {
-    width: 80px;
+    width: 90px;
     .nav-items {
       a {
         span {
@@ -80,25 +82,26 @@
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
+  .ai-limits-wrap {
+    background: v.$darkBlue;
+    padding: 1.5%;
+  }
   .ai-response-wrap {
-    width: 80%;
+    width: 100%;
     h1,
     h2 {
       font-family: var(--fonts-poppins);
-      font-weight: 800;
-      margin: 0;
-      padding: 0;
-      line-height: 1;
     }
-    h1 {
-      font-size: 7rem;
-    }
-    h2 {
-      font-family: var(--fonts-poppins);
-      font-weight: 300;
-      font-size: 2rem;
-      color: v.$grey;
-      margin: 0 0 50px 0;
+    .ai-repsonse-box-intro {
+      p {
+        font-family: var(--fonts-poppins);
+        margin: 10px 0 30px 0;
+        font-weight: 400;
+        color: v.$grey!important;
+      }
+      &.hide {
+        display: none;
+      }
     }
     .ai-response-box-wrap {
       position: absolute;
@@ -110,16 +113,16 @@
       overflow-y: scroll;
       display: flex;
       justify-content: center;
-      align-items: flex-end;
+      align-items: flex-start;
       flex-wrap: wrap;
       overflow-y: scroll;
     }
     .ai-response-box {
-      width: 70%;
+      width: 100%;
+      padding: 2.5%;
       p {
         color: v.$primaryFontColor;
         font-weight: 400;
-        font-size: 0.9rem;
         strong {
           font-size: 1.1rem;
           display: block;
@@ -129,7 +132,7 @@
       }
     }
     .ai-prompt-wrap {
-      padding: 40px 0 30px 0;
+      padding: 40px 2.5% 30px 2.5%;
       width: 100%;
       z-index: 5;
       position: relative;
@@ -149,7 +152,7 @@
         margin: 20px 0 0 0;
         display: block;
         text-align: center;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         font-weight: 400;
         color: v.$grey;
       }
@@ -159,19 +162,23 @@
 
 .gemResponseWrap, .gemLoader {
   position: relative;
-  background: v.$bgColor;
-  padding: 1.5% 2.5%;
-  background: v.$bgColor;
-  margin: 50px 0 0 10px;
   width: 80%;
   float: left;
+  margin-top: 60px;
+  span {
+    color: v.$primaryFontColor;
+  }
+  .gemResponseBox {
+    background: v.$bgColor;
+    padding: 25px;
+    margin-top: 10px;
+  }
   &.user {
-    background-color: v.$primaryBlue;
     color: v.$white;
     width: 80%;
     float: right;
-    margin: 30px 10px 0 0;
-    p {
+    .gemResponseBox {
+      background-color: v.$primaryBlue;
       color: v.$white!important;
     }
   }
@@ -189,4 +196,25 @@
       left: -100px;
     }
   }
+}
+
+// Settings page
+
+.dashboard-content-settings {
+  position: relative;
+  width: 100%;
+  padding: 2.5%;
+  .db-settingsForm {
+    .fire_uid {
+      display: none;
+    }
+  }
+}
+
+// Journal page
+
+.dashboard-content-journal {
+  position: relative;
+  width: 100%;
+  padding: 2.5%;
 }

@@ -14,7 +14,6 @@ import {
 import brain from "../assets/brain.jpg";
 
 const sbLinks = [
-  { title: "Dashboard", url: "", alt: "Dashboard", icon: faHouse },
   { title: "Ask AI", url: "ai", alt: "AI tool", icon: faCommentDots },
   { title: "Journal", url: "journal", alt: "Journal", icon: faFeather },
 ];

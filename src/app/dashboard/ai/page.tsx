@@ -12,7 +12,7 @@ export default function AiPage() {
  
   return (
     <>
-      <Ai />
+      <Ai currentuser={user} />
     </>
   );
 }

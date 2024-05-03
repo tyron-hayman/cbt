@@ -1,7 +1,7 @@
 @use "../variables" as v;
 
-body {
-  font-family: var(--fonts-poppins);
+body, html {
+  font-family: var(--fonts-poppins)!important;
 }
 
 #global-header {
